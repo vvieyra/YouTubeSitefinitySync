@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC0E0E72-8B72-4CAF-B069-C1BD26BB0DE2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebVideoSync</RootNamespace>
+    <AssemblyName>WebVideoSync</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.GData.Client, Version=2.1.0.0, Culture=neutral, PublicKeyToken=04a59ca9b0273830, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Extensions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0b4c5df2ebf20876, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Google.GData.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.YouTube">
+      <HintPath>..\References\Google.GData.YouTube.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\References\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess, Version=2011.3.1320.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Main\bin\Telerik.OpenAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity, Version=5.2.3800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Main\bin\Telerik.Sitefinity.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Model, Version=5.2.3800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Main\bin\Telerik.Sitefinity.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Resources, Version=5.2.3800.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Main\bin\Telerik.Sitefinity.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Utilities, Version=5.2.3800.0, Culture=neutral, PublicKeyToken=b28c218413bdf563, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Main\bin\Telerik.Sitefinity.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2012.3.1016.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Main\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\WebVideoSyncConfig.cs" />
+    <Compile Include="Module\CallVideoService.cs" />
+    <Compile Include="Module\ScheduledVideoSync.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register\GlobalMethods.cs" />
+    <Compile Include="Utilities\DataHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AjaxControlToolkit.dll" />
+    <Content Include="bin\Debug\DirectShowLib-2005.dll" />
+    <Content Include="bin\Debug\DocumentFormat.OpenXml.dll" />
+    <Content Include="bin\Debug\Google.GData.Client.dll" />
+    <Content Include="bin\Debug\Google.GData.Extensions.dll" />
+    <Content Include="bin\Debug\Google.GData.YouTube.dll" />
+    <Content Include="bin\Debug\Microsoft.Http.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.dll" />
+    <Content Include="bin\Debug\Microsoft.Practices.ServiceLocation.dll" />
+    <Content Include="bin\Debug\Microsoft.WindowsAzure.Diagnostics.dll" />
+    <Content Include="bin\Debug\Microsoft.WindowsAzure.ServiceRuntime.dll" />
+    <Content Include="bin\Debug\Microsoft.WindowsAzure.StorageClient.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Telerik.OpenAccess.35.Extensions.dll" />
+    <Content Include="bin\Debug\Telerik.OpenAccess.dll" />
+    <Content Include="bin\Debug\Telerik.OpenAccess.Web.dll" />
+    <Content Include="bin\Debug\Telerik.Sitefinity.dll" />
+    <Content Include="bin\Debug\Telerik.Sitefinity.Model.dll" />
+    <Content Include="bin\Debug\Telerik.Sitefinity.Personalization.dll" />
+    <Content Include="bin\Debug\Telerik.Sitefinity.Resources.dll" />
+    <Content Include="bin\Debug\Telerik.Sitefinity.Search.dll" />
+    <Content Include="bin\Debug\Telerik.Sitefinity.Services.Documents.dll" />
+    <Content Include="bin\Debug\Telerik.Sitefinity.Services.Notifications.dll" />
+    <Content Include="bin\Debug\Telerik.Sitefinity.Services.Statistics.dll" />
+    <Content Include="bin\Debug\Telerik.Sitefinity.Utilities.dll" />
+    <Content Include="bin\Debug\Telerik.Web.UI.dll" />
+    <Content Include="bin\Debug\Telerik.Windows.RadUploadHandler.dll" />
+    <Content Include="bin\Debug\Twitterizer2.dll" />
+    <Content Include="bin\Debug\WebVideoSync.dll" />
+    <Content Include="bin\Debug\WebVideoSync.pdb" />
+    <Content Include="obj\Debug\WebVideoSync.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\WebVideoSync.dll" />
+    <Content Include="obj\Debug\WebVideoSync.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\WebVideoSync.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
